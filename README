@@ -1,0 +1,17 @@
+This is a repository of my accepted leetcode submissions.
+My leetcode profile is: https://leetcode.com/u/whenthesunfalls/
+
+Included in this repository is a python script to export accepted submission code from leetcode's website.
+The submission only works for the export of your own submissions, since leetcode doesn't allow viewing of code
+beyond the last 20 submissions for anyone but yourself. In order to export your own submissions, you must log in to 
+leetcode on a web browser. From there you need to access your browser's network information (on Chrome this is Ctrl + Shift + i)
+and find any network packet from leetcode and fill in the header dictionary listed in the script. Additionally, you must copy
+the cookies found in the request header into the cookies string in the script. The most important of these are the
+csrf token and LEETCODE_SESSION cookie. The script should run properly if this is done correctly on Firefox or Chrome.
+I am unsure about other browsers. NOTE: only c++, python, and java submissions supported at the moment. This can be changed
+through editing of the file extension dictionary in the script.
+
+I'd like to add functionality to split problems based on difficulty, but in order to do so I need a way of resolving
+question difficulty labels. I couldn't find a repository for difficulty labels other than leetcode itself and I couldn't
+get the difficulty label html elements to load with requests or BeautifulSoup, likely a result of anti-scraping measures
+or incompatibility between scraping tools and the way the leetcode DOM loads.
